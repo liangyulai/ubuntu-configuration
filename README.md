@@ -14,8 +14,8 @@ A simple configuration for Git on Ubuntu
 [core]
 	excludesfile = /your-git-repo-directory/ubuntu-configuration/gitignore_global
 [user]
-	name = Yulai
-	email = yulailiang@cienet.com.cn
+	name = Your-name
+	email = Your-email-address
 [push]
 	default = simple
 ```
