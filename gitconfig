@@ -1,0 +1,39 @@
+[core]
+	editor = vim
+	excludesfile = gitignore_global
+	pager = more
+[color]
+	ui = auto
+
+[alias]
+	alias = !git config --list | grep ^alias
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+#	hist = log --pretty=\"%h - %s\"
+	lg = log --oneline --decorate --all --graph
+
+	cl = clean -dxf --exclude toside_ws --exclude *.patch
+	df = difftool --no-symlinks -d
+	head = rev-list -n1 --abbrev-commit HEAD
+	hist = log --graph --format=format:\"%C(red)%h%C(reset) %C(yellow)%ad%C(reset) | %s %C(green)\\[%an\\]%C(reset)%C(bold blue)%d%C(reset)\" --abbrev-commit --date=short
+	k = !gitk
+	kdiff = difftool -g
+	ll = diff --stat -r
+	ls = diff --name-status -r
+	root = rev-parse --show-toplevel
+
+[merge]
+	tool = bc3
+[mergetool]
+	bc3 = trustExitCode
+[diff]
+	tool = bc3
+[difftool]
+	bc3 = trustExitCode
+
+
+#[pager]
+#	diff = false
+#	log = false
