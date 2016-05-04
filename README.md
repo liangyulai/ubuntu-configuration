@@ -1,7 +1,7 @@
 # ubuntu-configuration
 A simple configuration for Git on Ubuntu
 
-## How to use the configuration
+## How to use the Git configuration
 
 * Clone the repo to you local folder
     * git clone https://github.com/liangyulai/ubuntu-configuration.git your-git-repo-directory
@@ -19,3 +19,9 @@ A simple configuration for Git on Ubuntu
 [push]
 	default = simple
 ```
+
+## install the oh-my-zsh
+[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+## install the vim plugins: spf13
+[spf13-vim : Steve Francia's Vim Distribution](https://github.com/spf13/spf13-vim)
