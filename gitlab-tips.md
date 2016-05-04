@@ -1,9 +1,9 @@
 
 # Use local images without pulling from Docker
 
-If you are using local docker image, which is not available on Docker registry
-It will try to pull from the Docker registry and then fall back to the local
-It is kind of waste time
+* If you are using local docker image, which is not available on Docker registry
+* It will try to pull from the Docker registry and then fall back to the local
+* It is kind of waste time
 
 ```
 gitlab-ci-multi-runner 1.0.4 (014aa8c)
@@ -15,7 +15,27 @@ WARNING: Locally found image will be used instead.
 Running on runner-6fff690c-project-62-concurrent-0 via Himalayas...
 ```
 
-* After disable the Docker image pull, it will save several seconds here (from 11s down to 6s):
+* Disable the Docker image pull
+
+```
+Himalayas at ~ ❯ sudo cat /etc/gitlab-runner/config.toml
+[sudo] password for kylin:
+concurrent = 1
+
+[[runners]]
+  name = "your-docker-name"
+  url = "your-gitlab-ci-address/ci"
+  token = "your-runner-token"
+  executor = "docker"
+  [runners.docker]
+    image = "ruby:2.1"
+    privileged = false
+    volumes = ["/cache"]
+    image_ttl = 0
+```
+
+# It will save several seconds here (from 11s down to 6s):
+
 ```
 gitlab-ci-multi-runner 1.0.4 (014aa8c)
 Using Docker executor with image ubuntu:v4 ...
