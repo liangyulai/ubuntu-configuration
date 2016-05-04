@@ -34,7 +34,7 @@ concurrent = 1
     image_ttl = 0
 ```
 
-# It will save several seconds here (from 11s down to 6s):
+* It will save several seconds here (from 11s down to 6s):
 
 ```
 gitlab-ci-multi-runner 1.0.4 (014aa8c)
