@@ -37,3 +37,8 @@
 #[pager]
 #	diff = false
 #	log = false
+[user]
+	email = liangyulai@hotmail.com
+	name = Yulai
+[push]
+	default = simple
